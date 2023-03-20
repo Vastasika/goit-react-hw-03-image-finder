@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Bars } from 'react-loader-spinner';
 import { getImages } from '../getImages';
 
-import Button from './Button/Button';
+import Button from '../Button/Button';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import { Modal } from '../Modal/Modal';
 
