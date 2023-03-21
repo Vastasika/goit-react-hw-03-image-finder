@@ -23,7 +23,7 @@ export class ImageGallery extends Component {
     const currentText = this.props.searchText;
 
     if (prevText !== currentText) {
-      this.setState({ loader: true });
+      this.setState({ loader: true, page: prevState.page=1});
 
       try {
         const response = await getImages(currentText, 1);
@@ -105,7 +105,7 @@ export class ImageGallery extends Component {
           wrapperClass=""
           visible={loader}
         />
-        {images.length > 0 && <Button onClick={handleButtonClick} />}
+        {images.length > 0 ? (<Button onClick={handleButtonClick}/>) :null}
       </>
     );
   }
